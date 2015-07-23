@@ -1,0 +1,13 @@
+<nav class="col-md-12">
+  <div id="main-nav-bar" class="navbar">
+    <ul class="nav navbar-nav" data-hook>
+      <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
+    </ul>
+  </div>
+
+  <div id = "order_errors" class="hidden"></div>
+  <div class="cart-header" id = 'cart-header'>
+        <%= render partial: 'spree/orders/header_order'  %>
+  </div>
+
+</nav>

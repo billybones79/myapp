@@ -1,0 +1,66 @@
+
+
+  <ul class="nav navbar-nav navbar-right" data-hook>
+    <li id="link-to-cart" data-hook>
+      <noscript>
+        <%= link_to Spree.t(:cart), '/cart' %>
+      </noscript>
+      &nbsp;
+    </li>
+    <script>Spree.fetch_cart()</script>
+  </ul>
+
+  <div class="inner-cart-header clear">
+
+    <a href="" class="btn_close close-cart">x</a>
+
+
+    <div id="ajax_cart" class="" data-hook="cart_container">
+
+        <% @order=  current_order || Spree::Order.incomplete.find_or_initialize_by(guest_token: cookies.signed[:guest_token])  %>
+
+        <% @body_id = 'cart' %>
+        <div data-hook="cart_container">
+          <h1><%= Spree.t(:shopping_cart) %></h1>
+
+          <% if @order.line_items.empty? %>
+              <div data-hook="empty_cart">
+                <div class="alert alert-info"><%= Spree.t(:your_cart_is_empty) %></div>
+              </div>
+          <% else %>
+              <div data-hook="outside_cart_form">
+                <%= form_for @order, url: update_cart_path, html: { id: 'update-cart' }, :remote => true do |order_form| %>
+                    <div data-hook="inside_cart_form">
+
+                      <div data-hook="cart_items" class="table-responsive">
+                        <%= render partial: 'spree/orders/form', locals: { order_form: order_form } %>
+                      </div>
+
+                      <div class="links col-md-6 navbar-form pull-right text-right" data-hook="cart_buttons">
+                        <div class="form-group">
+                          <%= button_tag class: 'btn btn-primary', id: 'update-button' do %>
+                              <%= Spree.t(:update) %>
+                          <% end %>
+                          <%= button_tag class: 'btn btn-lg btn-success', id: 'checkout-top', name: 'checkout' do %>
+                              <%= Spree.t(:checkout) %>
+                          <% end %>
+                        </div>
+                      </div>
+                    </div>
+                <% end %>
+              </div>
+
+              <div id="empty-cart" class="col-md-6 pull-left" data-hook>
+                <%= form_tag empty_cart_path, :method=>:put, :'data-remote'=> 'true' do %>
+                    <p id="clear_cart_link" data-hook>
+                      <%= submit_tag Spree.t(:empty_cart), class: 'btn btn-default' %>
+                    </p>
+                <% end %>
+              </div>
+          <% end %>
+        </div>
+
+    </div>
+
+  </div><!-- .inner-cart-header -->
+</div><!-- .cart-header -->

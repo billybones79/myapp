@@ -1,0 +1,59 @@
+<div class="content checkout">
+
+  <div class="container">
+
+
+
+  <div id="checkout-summary" data-hook="checkout_summary_box" class="summary">
+    <%= render :partial => 'summary', :locals => { :order => @order } %>
+  </div>
+
+
+    <div class="section-page">
+
+      <div class="inner-section-page">
+
+        <section class="section">
+
+          <header>
+            <h1>Paiement</h1>
+          </header>
+
+          <% @order.checkout_steps[0...-1].each_with_index do |state, index| %>
+
+              <%= @order.inspect %>
+              <% index = index+1 %>
+
+              <div class="checkout_section">
+                <div class="checkout_section-title clear">
+                  <h2>
+                    <%= link_to "#{index} - #{t("checkout.#{state}")}", checkout_state_path(state), remote: true, :class => 'checkout_section-link' %>
+                  </h2>
+                </div>
+
+                <div class="checkout_content <%= 'disabled-step' if state != @order.state %>" data-step="<%= state %>" data-hook="checkout_content" id="checkout_<%= state %>">
+                  <% if state == @order.state %>
+                      <%= render :partial => 'form_wrapper', :locals => { :order => @order, :state => state } %>
+                  <% end %>
+                </div>
+              </div>
+          <% end %>
+
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+    Spree.current_order_id = "<%= @order.number %>"
+    Spree.current_order_token = "<%= @order.guest_token %>"
+</script>
+
+<% if I18n.locale != :en %>
+    <script src='/assets/jquery.validate/localization/messages_<%= I18n.locale %>.js'></script>
+<% end %>

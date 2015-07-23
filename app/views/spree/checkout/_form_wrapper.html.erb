@@ -1,0 +1,20 @@
+<div data-hook="checkout_form_wrapper">
+
+  <%= render :partial => 'spree/shared/error_messages', :locals => { :target => order } %>
+
+  <%= form_for order, :url => update_checkout_path(state), :remote => (state != 'confirm'), :html => { :id => "checkout_form_#{state}" } do |form| %>
+      <% unless order.email? %>
+          <p class="field" style='clear: both'>
+            <%= form.label :email %><br />
+            <%= form.text_field :email %>
+          </p>
+      <% end %>
+
+      <%= render state, :form => form %>
+  <% end %>
+
+  <div class="checkout_section-loader">
+    <i class='fa fa-fw fa-3x fa-cog fa-spin icon-center'></i>
+  </div>
+
+</div>

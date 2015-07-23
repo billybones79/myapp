@@ -1,0 +1,9 @@
+$.ajax({
+    beforeSend : function(request)
+    {
+        request.setRequestHeader("Accept", "text/javascript");
+    },
+    type: 'GET',
+    url: '<%= checkout_state_path(@order.state) %>'
+});
+

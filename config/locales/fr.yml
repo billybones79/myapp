@@ -1,0 +1,68 @@
+fr:
+  header:
+    about: À propos
+    home: Accueil
+    careers: Carrières
+    contact_us: Nous joindre
+    account: Mon compte
+    cart: Panier
+    sitemap: Plan de site
+    customer_service: Service à la clientèle
+    shipping: Livraison
+    return: Retours
+    apply_online: Postuler en ligne
+    openings: Emplois offerts
+    publications: Nos diffusions
+    blog: Blogue
+    catalogs: Nos catalogues
+    ads: Publicités
+    videos: Vidéos
+    newsletter: Infolettres
+    informations: Mes informations
+    my_history: Mon historique
+    my_preferences: Mes préférences
+    gift_card: Cartes cadeaux
+    wishlist: Liste de souhaits
+    last_seen: Derniers produits vus
+    my_cart: Mon panier
+    our_stores: Nos magasins
+    all_rights_reserved: Tous droits réservés
+    usage_policy: Conditions d'utilisation
+    privacy_policy: Politique de confidentialité
+    made_by: Conception Web
+  taxons:
+    preview: Aperçu
+  products:
+    back_to: Retourner à la boutique
+    share: Partager
+    similar_products: Produits similaire
+    recently_viewed: Dernier produits vus
+  general:
+    not_specified: Non spécifié
+    thanks_for_shopping: Merci de magasiner chez Mode Choc
+    welcome: Bienvenue
+  messages:
+    add_to_cart_success: Le produit a été ajouté avec succès
+    add_to_cart_fail: Le produit est temporairement indisponible (quantité trop basse)
+  checkout:
+    summary: Sommaire
+    selection: Sélection
+    address: Facturation
+    delivery: Expédition
+    payment: Paiement
+    confirm: Confirmation
+  store:
+    opening_hours: Heures d'ouverture
+    to: à
+    careers: Carrières
+    apply_now: Voir notre section carrière
+    number_of_openings: Il y a %{count} poste(s) offert(s) actuellement à ce magasin
+    more_details: Voir les détails
+  days:
+    monday: Lundi
+    thursday: Mardi
+    wednesday: Mercredi
+    tuesday: Jeudi
+    friday: Vendredi
+    saturday: Samedi
+    sunday: Dimanche

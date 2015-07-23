@@ -1,0 +1,68 @@
+en:
+  header:
+    about: About
+    home: Home
+    careers: Careers
+    contact_us: Contact us
+    account: My account
+    cart: Cart
+    sitemap: Sitemap
+    customer_service: Customer service
+    shipping: Shipping
+    return: Return
+    apply_online: Apply online
+    openings: Openings
+    publications: Publications
+    catalogs: Catalogs
+    ads: Ads
+    blog: Blog
+    videos: Videos
+    newsletter: Newsletters
+    informations: My informations
+    my_history: My history
+    my_preferences: My preferences
+    wishlist: My wishlist
+    last_seen: Last seen products
+    my_cart: My cart
+    gift_card: Gift cards
+    our_stores: Our stores
+    all_rights_reserved: All rights reserved
+    usage_policy: Usage policy
+    privacy_policy: Privacy policy
+    made_by: Developped by
+  taxons:
+    preview: See more
+  products:
+    back_to: Back to catalog
+    share: Share
+    similar_products: Similar products
+    recently_viewed: Recently viewed products
+  general:
+    not_specified: Not specified
+    thanks_for_shopping: Thanks for shopping at Mode Choc
+    welcome: Welcome
+  messages:
+    add_to_cart_success: Product was added to cart
+    add_to_cart_fail: Selected product unavailable, no items left
+  checkout:
+    summary: Summary
+    selection: Selection
+    address: Address
+    delivery: Delivery
+    payment: Payment
+    confirm: Confirmation
+  store:
+    opening_hours: Opening hours
+    to: to
+    careers: Careers
+    apply_now: Apply now
+    number_of_openings: There is %{count} openings in this store
+    more_details: More details
+  days:
+    monday: Monday
+    thursday: Thursday
+    wednesday: Wednesday
+    tuesday: Tuesday
+    friday: Friday
+    saturday: Saturday
+    sunday: Sunday
